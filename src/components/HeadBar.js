@@ -22,7 +22,8 @@ const HeadBar = ({...rest}) => {
         showHideTransition="none"
       />
       <View style={styles.HeadBarStyle}>
-        <Text style={styles.title}>جَوْهَرُالذِّكْرِ</Text>
+        <Text style={styles.title} 
+        >{rest.title}</Text>
         {/* <Icon
           type={Icons.Feather}
           name={'search'}
@@ -70,7 +71,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: Color.white,
-    fontSize: 34,
+    fontSize: 30,
     fontWeight: 'bold',
   },
   searchBarContainer: {

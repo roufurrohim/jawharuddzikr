@@ -30,11 +30,11 @@ const circle2 = {0: {scale: 1}, 1: {scale: 0}};
 
 const TabArr = [
   {
-    route: 'JadwalSholat',
-    label: 'Jadwal',
+    route: 'Informations',
+    label: 'info',
     type: Icons.Feather,
-    icons: 'clock',
-    component: JadwalScreen,
+    icons: 'info',
+    component: InfoScreen,
   },
   {
     route: 'Home',
@@ -44,11 +44,11 @@ const TabArr = [
     component: HomeScreen,
   },
   {
-    route: 'Informations',
-    label: 'info',
+    route: 'JadwalSholat',
+    label: 'Jadwal',
     type: Icons.Feather,
-    icons: 'info',
-    component: InfoScreen,
+    icons: 'clock',
+    component: JadwalScreen,
   },
 ];
 

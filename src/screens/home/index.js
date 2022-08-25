@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import HeadBar from '../../components/HeadBar';
 import Colors from '../../components/Colors';
-import {windowWidth} from '../../components/Dimentions';
+import { windowWidth } from '../../components/Dimentions';
 // import {bg_num} from '../../assets';
 
 // import {Box, Circle, Col, Line, Padder, Row, ScaledText} from 'urip-rn-kit';
@@ -99,7 +99,7 @@ const HomeScreen = props => {
   };
   return (
     <View style={styles.container}>
-      <HeadBar />
+      <HeadBar title="جَوْهَرُالذِّكْرِ" />
       <FlatList
         data={datas}
         renderItem={renderItem}

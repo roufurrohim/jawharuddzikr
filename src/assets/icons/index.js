@@ -1,6 +1,7 @@
-import Ilogo from './icon.png';
-import Brosur from './brosur.pdf';
-import Bg from './SplashImg.png';
-import bg_num from './bg_num.png';
+import ComingSoon from './comingSoonNewCrop.png';
+import WebIcon from './webDh.png';
+import Ig from './ig.png';
+import Yt from './yt.png';
+import Fb from './fb.png';
 
-export {Ilogo, Brosur, Bg, bg_num};
+export { ComingSoon, WebIcon, Ig, Yt, Fb };
