@@ -1,40 +1,50 @@
-import React, { useState } from 'react';
-import {Text, View, StyleSheet, ScrollView, Dimensions, FlatList, TouchableOpacity, Image, Linking} from 'react-native';
+import React, {useState} from 'react';
+import {
+  Text,
+  View,
+  StyleSheet,
+  ScrollView,
+  Dimensions,
+  FlatList,
+  TouchableOpacity,
+  Image,
+  Linking,
+} from 'react-native';
 import InsetShadow from 'react-native-inset-shadow';
 import Colors from '../../components/Colors';
-import { WebIcon, Ig, Yt, Fb } from '../../assets/icons';
+import {WebIcon, Ig, Yt, Fb} from '../../assets/icons';
 import HeadBar from '../../components/HeadBar';
-import { windowWidth } from '../../components/Dimentions';
+import {windowWidth} from '../../components/Dimentions';
 
 const InfoScreen = () => {
   const datas = [
-      {
-        id: '1',
-        icon: WebIcon,
-        title: 'darulhudamayak.net',
-        url: "https://darulhudamayak.net/",
-      },
-      {
-        id: '2',
-        icon: Ig,
-        title: '@darulhudamayak',
-        url: "https://instagram.com/darulhudamayak?igshid=YmMyMTA2M2Y=",
-        // url: "instagram://profile/darulhudamayak"
-      },
-      {
-        id: '3',
-        icon: Yt,
-        title: 'Darul Huda Mayak',
-        url: "vnd.youtube://www.youtube.com/c/DarulHudaMayak007/featured",
-      },
-      {
-        id: '4',
-        icon: Fb,
-        title: 'Darul Huda Mayak Ponorogo',
-        // url: "https://bit.ly/fbDh",
-        url: 'fb://profile=DarulHudaMayak'
-      },
-  ]
+    {
+      id: '1',
+      icon: WebIcon,
+      title: 'darulhudamayak.net',
+      url: 'https://darulhudamayak.net/',
+    },
+    {
+      id: '2',
+      icon: Ig,
+      title: '@darulhudamayak',
+      // url: 'https://instagram.com/darulhudamayak?igshid=YmMyMTA2M2Y=',
+      url: 'instagram://user?username=darulhudamayak',
+    },
+    {
+      id: '3',
+      icon: Yt,
+      title: 'Darul Huda Mayak',
+      url: 'vnd.youtube://www.youtube.com/c/DarulHudaMayak007/featured',
+    },
+    {
+      id: '4',
+      icon: Fb,
+      title: 'Darul Huda Mayak Ponorogo',
+      url: 'https://facebook.com/DarulHudaMayak',
+      // url: 'fb://page/DarulHudaMayak/',
+    },
+  ];
   const [selectedId, setSelectedId] = useState(null);
 
   const windowWidth = Dimensions.get('window').width;
@@ -47,11 +57,11 @@ const InfoScreen = () => {
           <View>
             <Text style={[styles.title, textColor]}>{item.title}</Text>
           </View>
-          <Image 
+          <Image
             source={item.icon}
             style={{
               width: 50,
-              height: 50
+              height: 50,
             }}
           />
         </View>
@@ -67,8 +77,8 @@ const InfoScreen = () => {
       <Item
         item={item}
         onPress={() => {
-          Linking.openURL(item.url)
-          setSelectedId(item.id)
+          Linking.openURL(item.url);
+          setSelectedId(item.id);
         }}
         backgroundColor={{backgroundColor}}
         textColor={{color}}
@@ -76,14 +86,12 @@ const InfoScreen = () => {
     );
   };
 
-
   return (
     <View style={{...styles.container}}>
       <InsetShadow
-        shadowColor={"rgb(70, 219, 195)"}
+        shadowColor={'rgb(70, 219, 195)'}
         elevation={80}
-        containerStyle={{...styles.shadows, windowHeight, windowWidth}}
-        >
+        containerStyle={{...styles.shadows, windowHeight, windowWidth}}>
         <HeadBar title="Informasi" />
         <FlatList
           data={datas}
@@ -140,5 +148,4 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '400',
   },
-
 });
